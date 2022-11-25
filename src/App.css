@@ -6,15 +6,15 @@
 }
 
 .container{
-    background-color:#343f53;
+    background-color:rgba(0, 0, 0, 0.88);
     display:flex;
 }
 .sideNav{
-    background-color: #121728;
+    background-color:#2c2c2e;
     color:#fff;
     height:100vh;
     width:300px;
-    border-right:0.5px solid #cfe8fc;
+    border-right:0.2px solid #cfe8fc;
 }
 .top-section{
     display: flex;
@@ -22,56 +22,61 @@
     padding:20px 15px;
 
 }
-.logo{
+.logo img{
+    width:50px;
+    float:left;
+    padding:15px;
+}
+.logo h1{
     font-size:25px;
 }
 .link{
     display:flex;
     color:#fff;
+    margin:5px 15px;
+    border-radius:5px;
     padding: 10px 15px;
     gap:15px;
     transition:  all 0.5s;
 }
 .link:hover{
-    background:#ccc;
-    color:#000;
+    background:rgba(0,0,0,0.5);
+
     transform: all 0.5s;;
 }
 .active{
     background:#ccc;
-    color:#000;
+    background:rgba(0,0,0,0.5);
 }
 .icon, .link_text{
     font-size:20px;
 }
 .searchFilter{
-    padding:5px;
-    border:1px solid #fff;
-    border-radius:5px;
-    margin:15px;
+    padding: 10px 15px;
+    gap:15px;
 }
 
+.css-cuefkz-MuiContainer-root {
+    max-width: 100% !important;
+}
 .page-container{
-    margin: 0px auto;
-    width: 100%;
-    max-width: 1680px;
-    height: 50px;
-    display: grid;
-    grid-template-columns: calc(30% - 22px) minmax(40%, 900px) calc(30% + 22px);
-    grid-template-areas: "playback lcd controls";
-    align-items: center;
-    position: relative;
-    color: #ccc;
+    margin-top:50px;
+ display: flex;
+ flex-shrink: 0;
+ width: 100%;
+
+
 }
 .top-container{
     top: 0;
-    background:#121728;
+    background: #2c2c2e;
     flex-shrink: 0;
     height: 54px;
     position: fixed;
     width: 100%;
     z-index: 9901;
     padding: 0px 16px;
+    color:#fff;
 }
 
 .main-page{
@@ -94,9 +99,25 @@
     padding:20px;
 }
 .page-title h1{
-
-    font-size:50px;
+    color:#fff;
+    padding-bottom:15px;
+    font-size:30px;
 }
 .card-item{
     margin:20px;
+}
+.slider-title{
+    display: flex;
+    flex-direction: row;
+    padding:15px;
+}
+.slider-title h1{
+    color:#ccc;
+    font-size: 20px;
+}
+.slider-title span{
+    color:#ccc;
+    margin:5px;
+    font-size: 20px;
+  
 }

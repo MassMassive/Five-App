@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { SideNav } from "./Components/SideNav";
+import { Browse } from "./Pages/Browse";
+import { ListenNow } from "./Pages/ListenNow.js";
+import { Radio } from "./Pages/Radio.js";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <SideNav>
+        <Routes>
+          <Route path="/" element={<Browse />} />
+          <Route path="/browse" element={<Browse />} />
+          <Route path="/listenNow" element={<ListenNow />} />
+          <Route path="/radio" element={<Radio />} />
+        </Routes>
+      </SideNav>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

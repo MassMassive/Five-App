@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    background-color:#343f53;
+    display:flex;
+}
+.sideNav{
+    background-color: #121728;
+    color:#fff;
+    height:100vh;
+    width:300px;
+    border-right:0.5px solid #cfe8fc;
+}
+.top-section{
+    display: flex;
+    align-items: center;
+    padding:20px 15px;
+
+}
+.logo{
+    font-size:25px;
+}
+.link{
+    display:flex;
+    color:#fff;
+    padding: 10px 15px;
+    gap:15px;
+    transition:  all 0.5s;
+}
+.link:hover{
+    background:#ccc;
+    color:#000;
+    transform: all 0.5s;;
+}
+.active{
+    background:#ccc;
+    color:#000;
+}
+.icon, .link_text{
+    font-size:20px;
+}
+.searchFilter{
+    padding:5px;
+    border:1px solid #fff;
+    border-radius:5px;
+    margin:15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page-container{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1680px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: calc(30% - 22px) minmax(40%, 900px) calc(30% + 22px);
+    grid-template-areas: "playback lcd controls";
+    align-items: center;
+    position: relative;
+    color: #ccc;
+}
+.top-container{
+    top: 0;
+    background:#121728;
+    flex-shrink: 0;
+    height: 54px;
+    position: fixed;
+    width: 100%;
+    z-index: 9901;
+    padding: 0px 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-page{
+    margin-top:50px;
+    flex-grow: 1;
+    width:100%;
 }
-
-.App-link {
-  color: #61dafb;
+.content-container{
+    margin: 0 auto;
+    max-width: 1680px;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
 }
+.page-title{
+   position: relative;
+   display: inline-block;
+    width:100%;
+    padding:20px;
+}
+.page-title h1{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    font-size:50px;
+}
+.card-item{
+    margin:20px;
 }

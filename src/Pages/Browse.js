@@ -1,13 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardActions from "@mui/material/CardActions";
-import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
-import { FaChevronRight, FaPlayCircle } from "react-icons/fa";
+import { FaChevronRight, FaPlayCircle} from "react-icons/fa";
 import Slider from "react-slick";
-import { featuredPlayList, newMusic } from "./MusicList";
+import { featuredPlayList } from "./MusicList";
 function Browse() {
   const settings = {
     dots: true,
@@ -51,31 +47,29 @@ function Browse() {
     slidesToShow: 3,
     slidesToScroll: 3,
   };
+  
   return (
-    <div className="page-container" maxWidth="sm">
-      <Container maxWidth="sm">
+    <div className="page-container">
+      <Container>
         <div className="content-container">
           <div className="page-title">
             <h1>Browse page</h1>
-            <hr />
           </div>
           <div className="card-slider">
             <Slider {...bigSettings}>
               {featuredPlayList.map((item) => (
-                <Card sx={{ maxWidth: 540 }} className="card-item">
-                  <CardHeader title={item.category} subheader={item.genre} />
-                  <CardMedia
-                    component="img"
-                    height="194"
-                    image={item.linkImage}
-                    alt={item.category}
-                  />
-                  <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
+                <div sx={{ maxWidth: 540 }} className="card-item">
+                  <div class="card-header">
+                    <h1>{item.category}</h1>
+                    <h2>{item.genre}</h2>
+                  </div>
+                  <div className="big-card-wrap">
+                    <img src={item.linkImage} />
+                    <IconButton className="card-icon">
                       <FaPlayCircle />
                     </IconButton>
-                  </CardActions>
-                </Card>
+                  </div>
+                </div>
               ))}
             </Slider>
           </div>
@@ -88,20 +82,18 @@ function Browse() {
             </div>
             <Slider {...settings}>
               {featuredPlayList.map((item) => (
-                <Card sx={{ maxWidth: 400 }} className="card-item">
-                  <CardHeader title={item.category} subheader={item.genre} />
-                  <CardMedia
-                    component="img"
-                    height="194"
-                    image={item.linkImage}
-                    alt={item.category}
-                  />
-                  <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
+                <div sx={{ maxWidth: 400 }} className="card-item">
+                  <div className="small-card-wrap">
+                    <img src={item.linkImage} />
+                    <IconButton className="card-icon">
                       <FaPlayCircle />
                     </IconButton>
-                  </CardActions>
-                </Card>
+                  </div>
+                  <div class="card-footer">
+                    <h1>{item.category}</h1>
+                    <h2>{item.genre}</h2>
+                  </div>
+                </div>
               ))}
             </Slider>
           </div>
@@ -114,20 +106,18 @@ function Browse() {
             </div>
             <Slider {...settings}>
               {featuredPlayList.map((item) => (
-                <Card sx={{ maxWidth: 400 }} className="card-item">
-                  <CardHeader title={item.category} subheader={item.genre} />
-                  <CardMedia
-                    component="img"
-                    height="194"
-                    image={item.linkImage}
-                    alt={item.category}
-                  />
-                  <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
+                <div sx={{ maxWidth: 400 }} className="card-item">
+                  <div className="small-card-wrap">
+                    <img src={item.linkImage} />
+                    <IconButton className="card-icon">
                       <FaPlayCircle />
                     </IconButton>
-                  </CardActions>
-                </Card>
+                  </div>
+                  <div class="card-footer">
+                    <h1>{item.category}</h1>
+                    <h2>{item.genre}</h2>
+                  </div>
+                </div>
               ))}
             </Slider>
           </div>

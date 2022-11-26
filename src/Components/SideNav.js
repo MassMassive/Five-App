@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { FaTh, FaMusic, FaThList, FaFilter, FaSearch } from "react-icons/fa";
+import { FaThLarge, FaMusic, FaRegPlayCircle} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
@@ -52,14 +52,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const SideNav = ({ children }) => {
   const menuItem = [
     {
-      path: "/browse",
-      name: "Browse",
-      icon: <FaTh />,
-    },
-    {
       path: "/listenNow",
       name: "Listen Now",
-      icon: <FaThList />,
+      icon: <FaRegPlayCircle />,
+    },
+    {
+      path: "/browse",
+      name: "Browse",
+      icon: <FaThLarge />,
     },
     {
       path: "/radio",
